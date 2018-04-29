@@ -145,10 +145,9 @@ function heal() {
 		health = health + 10
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
-	} else if (health > 90 m>=70) {
+	} else if (health > && m>=70) {
 		elem1 = document.getElementById('status')
 		elem1.innerHTML = 'STATUS: Your cat is very healthy!'
-
 	} else {
 		elem2 = document.getElementById('status')
 		elsem2.innerHTML = 'STATUS: Not enough money!'
