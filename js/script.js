@@ -1,21 +1,27 @@
 
 var m = 50;
 	ms = 1;
-	health = 5
-	fun = 5
+	health = 100
+	fun = 100
 var	timer
 var	lifetimer
 
 window.onload = function() {
 	document.getElementById("fun").style.width = fun + '%';
 	document.getElementById("h").style.width = health + '%';
-	// timer = window.setInterval(work, 1000);
+	timer = window.setInterval(work, 1500);
 	lifetimer = window.setInterval(life, 2200)
+}
+
+function work() {
+	m = m + 10
+	elem = document.getElementById('score')
+	elem.innerHTML = 'MONEY: ' + m
 }
 
 function life() {
 	if (health > 0 && fun > 0) {
-		fun = fun - 0.5
+		fun = fun - 1
 		health = health - 0.5
 		if (fun < 0) {
 			fun = 0
@@ -122,38 +128,47 @@ function moneyplus() {
 
 function walk() {
 	var e = document.getElementById('w')
-	if (fun < 100) {
+	if (fun < 91) {
 		fun = fun + 10
 		elem = document.getElementById('status')
-		elem.innerHTML = 'STATUS: You bought improved!'
+		elem.innerHTML = 'STATUS: You went for a walk!'
+	} else {
+		elem1 = document.getElementById('status')
+		elem1.innerHTML = 'STATUS: Your cat is very cheerful!'
 	}
 }
 
 function heal() {
 	var e = document.getElementById('he');
-	if (health < 100 && m >=70) {
+	if (health < 91 && m >=70) {
 		m = m - 70
 		health = health + 10
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
-	} else {
+	} else if (health > 90 m>=70) {
 		elem1 = document.getElementById('status')
-		elem1.innerHTML = 'STATUS: Not enough money!'
+		elem1.innerHTML = 'STATUS: Your cat is very healthy!'
 
+	} else {
+		elem2 = document.getElementById('status')
+		elsem2.innerHTML = 'STATUS: Not enough money!'
 	}
 }
 
 function travel() {
 	var e = document.getElementById('he');
-	if (fun < 100 && m >=1000) {
+	if (m >=1000 && fun < 20) {
 		m = m - 1000
 		fun = fun + 70
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
-	} else {
+	} else if (fun > 20 m >=1000) {
 		elem1 = document.getElementById('status')
-		elem1.innerHTML = 'STATUS: Not enough money!'
+		elem1.innerHTML = 'STATUS: Your cat is very cheerful!'
 
+	} else {
+		elem2 = document.getElementById('status')
+		elsem2.innerHTML = 'STATUS: Not enough money!'
 	}
 }
 
