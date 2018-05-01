@@ -1,5 +1,5 @@
 
-var m = 0;
+var m = 50;
 	ms = 1;
 	health = 100
 	fun = 100
@@ -10,13 +10,13 @@ window.onload = function() {
 	document.getElementById("fun").style.width = fun + '%';
 	document.getElementById("h").style.width = health + '%';
 	// timer = window.setInterval(work, 1000);
-	lifetimer = window.setInterval(life, 1400)
-	lifetimer = window.setInterval(life, 1400)
+	lifetimer = window.setInterval(life, 2200)
+	lifetimer = window.setInterval(life, 1900)
 }
 
 function life() {
-	fun = fun - 0.4
-	health = health - 0.2
+	fun = fun - 0.5
+	health = health - 0.5
 	if (fun < 0) {
 		fun = 0
 	}
@@ -28,6 +28,7 @@ function showmenu() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'block';
+	document.getElementById('status').style.display = 'none';
 	document.getElementById('ch').style.display = 'none';
 	document.getElementById('cp').style.display = 'none';
 	document.getElementById('about').style.display = 'none';
@@ -53,9 +54,10 @@ function money3() {
 }
 
 function showmarket() {
-	var elem = document.getElementById('score')	
+	var elem = document.getElementById('score')		
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'none';
+	document.getElementById('status').style.display = 'block';
 	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('market').style.display = 'block'
 	document.getElementById('about').style.display = 'none';
@@ -108,6 +110,43 @@ function moneyplus() {
 	else {
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: Not enough money!'
+	}
+}
+
+function walk() {
+	var e = document.getElementById('w')
+	if (fun < 100) {
+		fun = fun + 10
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+	}
+}
+
+function heal() {
+	var e = document.getElementById('he');
+	if (health < 100 && m >=70) {
+		m = m - 70
+		health = health + 10
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+	} else {
+		elem1 = document.getElementById('status')
+		elem1.innerHTML = 'STATUS: Not enough money!'
+
+	}
+}
+
+function travel() {
+	var e = document.getElementById('he');
+	if (fun < 100 && m >=1000) {
+		m = m - 1000
+		fun = fun + 70
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+	} else {
+		elem1 = document.getElementById('status')
+		elem1.innerHTML = 'STATUS: Not enough money!'
+
 	}
 }
 

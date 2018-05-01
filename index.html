@@ -11,7 +11,8 @@
 </head>
 <body>
 	<h2 id='start_label'>CAT SIMULATOR</h2>
-	<h2 id='score'>MONEY: 0</h2>
+	<h2 id='score'>MONEY: 50</h2>
+	<h2 id='status'>STATUS: NONE</h2>
 	<hr id='hr2'>
 
 	<div class='menu' id='menu'>
@@ -30,14 +31,18 @@
 
 	<div id='ch'>
 		<h3>HEALTH</h3>
-		<div id='h'></div>
+		<div id='hb'><div id='h'></div></div>
 		<h3>FUN</h3>
-		<div id='fun'></div>
+		<div id='fb'><div id='fun'></div></div>
 	</div>
 
 	<div id='market'>
-		<h2 id='status'>STATUS: NONE</h2>
 		<li><a href="javascript:void(0)" onClick='moneyplus()' id='plus'>500 coins: +1 coins per click</a></li>
+		<h3 id='funs'>FUN</h3>
+		<li><a href="javascript:void(0)" onClick='walk()' id='w'>0 coins: +10 Go walk with pet</a></li>
+		<li><a href="javascript:void(0)" onClick='travel()' id='t'>1000 coins: +70 Go travel with pet</a></li>
+		<h3 id='food'>FOOD</h3>
+		<li><a href="javascript:void(0)" onClick='heal()' id='he'>70 coins: +10 health</a></li>
 	</div>
 	<div id='about'>
 	<h2 id='abouth'>Cat simulator is a simple game where you have to take care of your pet, raise its level and drive to competitions</h2>

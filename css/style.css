@@ -91,6 +91,7 @@ img {
 h3 {
 	text-align: center;
 	font-size: 25px;
+	padding-top: 7px;	
 }
 
 #exit {
@@ -109,8 +110,9 @@ h3 {
 }
 
 #status {
-	padding-top: 0;
-	font-size: 25px;
+	padding-top: 5px;
+	font-size: 22px;
+	display: none;
 }
 
 #score {
@@ -171,6 +173,7 @@ h3 {
 	height: 25px;
 	vertical-align: middle;
 	text-align: left;
+	border-radius: 1px;
 }
 
 #fun {
@@ -179,7 +182,20 @@ h3 {
 	width: 300px;
 	height: 25px;
 	vertical-align: middle;
-	text-align: left;	
+	text-align: left;
+	border-radius: 1px;
+}
+
+#hb {
+	border: solid 2px blue;
+	height: 25px;
+	border-radius: 1px;
+}
+
+#fb {
+	border: 2px solid orange;
+	height: 25px;
+	border-radius: 2px;
 }
 
 @-webkit-keyframes bg {
