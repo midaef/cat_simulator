@@ -1,0 +1,148 @@
+ 
+* {
+	text-decoration: none;
+	margin: 0;
+	padding: 0;
+	font-family: "Raleway";
+}
+
+body {
+	background-image: url(bg.jpg);
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-overflow-scrolling: touch;
+}
+
+.menu {
+	background-color: #f0f8ff;
+	width: 270px;
+	height: 270px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+}
+
+#hr1 {
+	margin: 0 auto;
+}
+
+#hr2 {
+	margin-top: 50px;
+}
+
+h2 {
+	text-align: center;
+	padding-top: 100px;
+	font-size: 25px;
+}
+
+li {
+	font-size: 24px;
+	margin: 10px;
+	list-style-type: none;
+	margin: 0 auto;
+	padding-top: 15px;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	background-color: #000;
+	color: white;
+}
+
+.footer {
+	text-align: center;
+	padding-top: 12px;
+}
+
+#start {
+	display: none;
+}
+
+#start {
+ 	background-color: #f0f8ff;
+	width: 270px;
+	height: 270px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+}
+
+img {
+	width: 270px;
+	height: 270px;
+}
+
+h3 {
+	text-align: center;
+	font-size: 20px;
+}
+
+#exit {
+	text-align: center;
+}
+
+#market {
+	background-color: #f0f8ff;
+	width: 400px;
+	height: 300px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}
+
+#status {
+	padding-top: 0;
+}
+
+#score {
+	padding-top: 0;
+}
+
+#about {
+	display: none;
+	background-color: #f0f8ff;
+	width: 420px;
+	height: 300px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+}
+
+#abouth {
+	padding-top: 0;
+	padding: 10px;
+}
+
+#abouth3 {
+	padding-top: 20px;
+}
+
+#f {
+	color: black;
+	font-size: 20px;
+}
+
+#cp {
+	background-color: #f0f8ff;
+	width: 270px;
+	height: 270px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}
+
+#ch {
+	background-color: #f0f8ff;
+	width: 400px;
+	height: 400px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}
