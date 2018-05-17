@@ -1,12 +1,34 @@
 
 var m = 0;
 	ms = 1;
+	health = 100
+	fun = 100
+var	timer
+var	lifetimer
 
+window.onload = function() {
+	document.getElementById("fun").style.width = fun + '%';
+	document.getElementById("h").style.width = health + '%';
+	// timer = window.setInterval(work, 1000);
+	lifetimer = window.setInterval(life, 1400)
+	lifetimer = window.setInterval(life, 1400)
+}
+
+function life() {
+	fun = fun - 0.4
+	health = health - 0.2
+	if (fun < 0) {
+		fun = 0
+	}
+	document.getElementById("fun").style.width = fun + '%';
+	document.getElementById("h").style.width = health + '%';
+}
 
 function showmenu() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'block';
+	document.getElementById('ch').style.display = 'none';
 	document.getElementById('cp').style.display = 'none';
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('start').style.display = 'none';
@@ -61,6 +83,8 @@ function competitions() {
 }
 
 function ch() {
+	var e = document.getElementById('h').style.width = health + '%'
+	var e = document.getElementById('fun').style.width = fun + '%'
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('ch').style.display = 'block';

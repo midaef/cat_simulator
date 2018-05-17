@@ -11,13 +11,15 @@
 </head>
 <body>
 	<h2 id='start_label'>CAT SIMULATOR</h2>
+	<h2 id='score'>MONEY: 0</h2>
 	<hr id='hr2'>
 
 	<div class='menu' id='menu'>
 		<li><a href="javascript:void(0)" onClick='showgame()'>CAT</a></li>
-		<li><a href="javascript:void(0)" onClick=' ch()'>CHARACTERISTICS</a></li>
-		<li><a href="javascript:void(0)" onClick=' competitions()'>COMPETITIONS</a></li>
+		<li><a href="javascript:void(0)" onClick='ch()'>CHARACTERISTICS</a></li>
+		<li><a href="javascript:void(0)" onClick='competitions()'>COMPETITIONS</a></li>
 		<li><a href="javascript:void(0)" onClick='showmarket()'>MARKETPLACE</a></li>
+		<li><a href="javascript:void(0)" onClick='set()'>SETTINGS</a></li>
 		<li><a href="javascript:void(0)" onClick='about()'>ABOUT</a></li>
 	</div>
 	<div id='start'>
@@ -26,7 +28,12 @@
 
 	<div id='cp'></div>
 
-	<div id='cp'></div>
+	<div id='ch'>
+		<h3>HEALTH</h3>
+		<div id='h'></div>
+		<h3>FUN</h3>
+		<div id='fun'></div>
+	</div>
 
 	<div id='market'>
 		<h2 id='status'>STATUS: NONE</h2>
@@ -36,10 +43,9 @@
 	<h2 id='abouth'>To get you coins, you have to click. If the edge of the coin falls, you will be credited it to the account. In the store you can buy everything you need to improve performance</h2>
 	<h3 id='abouth3'>Created by DanilPresent</h3>	
 	</div>
-	<h2 id='score'>MONEY: 0</h2>
 	<li id='exit' onClick='showmenu()'></li>
 
-	<hr id='h1'>
+	<hr id='hr1'>
 	<div class="footer"><p id='f'>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; 2018 NameLess</p></div>
 </body>
 </html>

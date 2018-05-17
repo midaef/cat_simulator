@@ -7,14 +7,21 @@
 }
 
 body {
-	background-image: url(bg.jpg);
+	background: linear-gradient(98deg, #79cb14, #3762ff, #d7fa38, #38f3fa);
+	background-size: 800% 800%;
+	-webkit-animation: bg 48s ease infinite;
+	-moz-animation: bg 48s ease infinite;
+	-o-animation: bg 48s ease infinite;
+	animation: bg 48s ease infinite;
+
+	/*background-image: url(bg.jpg);*/
 	background-repeat: all;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
 }
 
 .menu {
-	background-color: #f0f8ff;
+	/*background-color: #f0f8ff;*/
 	width: 270px;
 	height: 270px;
 	vertical-align: middle;	
@@ -24,10 +31,11 @@ body {
 
 #hr1 {
 	margin: 0 auto;
+	margin-top: 10px;
 }
 
 #hr2 {
-	margin-top: 50px;
+	margin-top: 20px;
 }
 
 h2 {
@@ -49,6 +57,8 @@ a {
 }
 
 a:hover {
+	border: 7px solid black;
+	border-radius: 25px;
 	background-color: #000;
 	color: white;
 }
@@ -63,8 +73,8 @@ a:hover {
 }
 
 #start {
- 	background-color: #f0f8ff;
-	width: 270px;
+ 	/*background-color: #f0f8ff;*/
+	width: 200px;
 	height: 270px;
 	vertical-align: middle;	
 	text-align: center;
@@ -72,21 +82,24 @@ a:hover {
 }
 
 img {
-	width: 270px;
+	width: 300px;
 	height: 270px;
+	margin: 0 auto;
+	vertical-align: middle; 
 }
 
 h3 {
 	text-align: center;
-	font-size: 30px;
+	font-size: 25px;
 }
 
 #exit {
 	text-align: center;
+	width: 200px;
 }
 
 #market {
-	background-color: #f0f8ff;
+	/*background-color: #f0f8ff;*/
 	width: 400px;
 	height: 300px;
 	vertical-align: middle;	
@@ -97,17 +110,20 @@ h3 {
 
 #status {
 	padding-top: 0;
+	font-size: 25px;
 }
 
 #score {
-	padding-top: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 23px;
 }
 
 #about {
 	display: none;
-	background-color: #f0f8ff;
+	/*background-color: #f0f8ff;*/
 	width: 420px;
-	height: 300px;
+	height: 370px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -128,7 +144,7 @@ h3 {
 }
 
 #cp {
-	background-color: #f0f8ff;
+	/*background-color: #f0f8ff;*/
 	width: 270px;
 	height: 270px;
 	vertical-align: middle;	
@@ -138,11 +154,55 @@ h3 {
 }
 
 #ch {
-	background-color: #f0f8ff;
+	/*background-color: #f0f8ff;*/
 	width: 400px;
-	height: 400px;
+	height: 370px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
 	display: none;
+}
+
+#h {
+	/*margin: 0 auto;*/
+	margin-bottom: 20px;
+	background-color: blue;
+	width: 300px;
+	height: 25px;
+	vertical-align: middle;
+	text-align: left;
+}
+
+#fun {
+	/*margin: 0 auto;*/
+	background-color: orange;
+	width: 300px;
+	height: 25px;
+	vertical-align: middle;
+	text-align: left;	
+}
+
+@-webkit-keyframes bg {
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+@-moz-keyframes bg {
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+@-o-keyframes bg {
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+@keyframes bg { 
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+
+#start_label {
+	margin-bottom: 20px;
 }
