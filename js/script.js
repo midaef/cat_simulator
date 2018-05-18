@@ -162,7 +162,7 @@ function travel() {
 		fun = fun + 70
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
-	} else if (fun > 20 m >=1000) {
+	} else if (fun > 20 && m >=1000) {
 		elem1 = document.getElementById('status')
 		elem1.innerHTML = 'STATUS: Your cat is very cheerful!'
 
