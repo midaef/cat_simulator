@@ -32,7 +32,7 @@ function life() {
 		alert('Your cat died! :(')
 		window.clearInterval(lifetimer);
 		window.clearInterval(timer);
-		window.location.reload()
+		location.reload()
 	}
 }
 	
@@ -168,7 +168,7 @@ function travel() {
 
 	} else {
 		elem2 = document.getElementById('status')
-		elsem2.innerHTML = 'STATUS: Not enough money!'
+		elem2.innerHTML = 'STATUS: Not enough money!'
 	}
 }
 
