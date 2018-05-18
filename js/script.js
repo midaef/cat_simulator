@@ -1,8 +1,8 @@
 
 var m = 50;
 	ms = 1;
-	health = 100
-	fun = 100
+	health = 5
+	fun = 5
 var	timer
 var	lifetimer
 
@@ -11,18 +11,25 @@ window.onload = function() {
 	document.getElementById("h").style.width = health + '%';
 	// timer = window.setInterval(work, 1000);
 	lifetimer = window.setInterval(life, 2200)
-	lifetimer = window.setInterval(life, 1900)
 }
 
 function life() {
-	fun = fun - 0.5
-	health = health - 0.5
-	if (fun < 0) {
-		fun = 0
+	if (health > 0 && fun > 0) {
+		fun = fun - 0.5
+		health = health - 0.5
+		if (fun < 0) {
+			fun = 0
+		} 
+		document.getElementById("fun").style.width = fun + '%';
+		document.getElementById("h").style.width = health + '%';
+	} else {
+		alert('Your cat died! :(')
+		window.clearInterval(lifetimer);
+		window.clearInterval(timer);
+		window.location.reload()
 	}
-	document.getElementById("fun").style.width = fun + '%';
-	document.getElementById("h").style.width = health + '%';
 }
+	
 
 function showmenu() {
 	var elem = document.getElementById('score')	
