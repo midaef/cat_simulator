@@ -45,14 +45,14 @@ window.onload = function() {
 		health = 48
 		document.cookie = 'health=' + health + ';'
 	} else {
-		health = parseInt(cookiesh1)
+		health = parseInt(cookieh)
 	}
 
 	if (cookief == '') {
 		fun = 52
 		document.cookie = 'fun=' + fun + ';'
 	} else {
-		fun = parseInt(cookiesh2)
+		fun = parseInt(cookief)
 	}
 
 	var elem = document.getElementById('score')	
