@@ -7,21 +7,67 @@ var	timer
 var	lifetimer
 
 window.onload = function() {
-	var name = prompt('Name of your cat:' , 'Bob')
-	if (name == "" || name == null) {
-		location = location
-	}
-	document.getElementById('name').innerHTML = 'Name: ' + name;
+	
 	document.getElementById("fun").style.width = fun + '%';
 	document.getElementById("h").style.width = health + '%';
 	timer = window.setInterval(work, 1500);
 	lifetimer = window.setInterval(life, 2200)
+	// ----------------------------------------------------------------------------------------
+	cookiem = document.cookie.replace(/(?:(?:^|.*;\s*)m\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiems = document.cookie.replace(/(?:(?:^|.*;\s*)ms\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookieh = document.cookie.replace(/(?:(?:^|.*;\s*)health\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookief = document.cookie.replace(/(?:(?:^|.*;\s*)fun\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookien = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	if (cookien != '') {
+		var name = prompt('Name of your cat:' , 'Bob')
+		if (name == "" || name == null) {
+			location = location
+		}
+		document.cookie = 'name=' + name + ';'
+	} else {
+		name = cookien
+	}
+	if (cookiem == '') {
+		m = 0
+		document.cookie = 'm=' + m + ';'
+	} else {
+		m = parseInt(cookiem)
+	}
+
+	if (cookiems == '') {
+		ms = 1
+		document.cookie = 'ms=' + ms + ';'
+	} else {
+		ms = parseInt(cookiems)
+	}
+
+	if (cookieh == '') {
+		health = 48
+		document.cookie = 'health=' + health + ';'
+	} else {
+		health = parseInt(cookiesh1)
+	}
+
+	if (cookief == '') {
+		fun = 52
+		document.cookie = 'fun=' + fun + ';'
+	} else {
+		fun = parseInt(cookiesh2)
+	}
+
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m;
+	document.getElementById('name').innerHTML = 'Name: ' + name;
+
+	// ----------------------------------------------------------------------------------------
 }
+
 
 function work() {
 	m = m + 10
 	elem = document.getElementById('score')
 	elem.innerHTML = 'MONEY: ' + m
+	document.cookie = 'm=' + m + ';'
 }
 
 function life() {
@@ -33,6 +79,8 @@ function life() {
 		} 
 		document.getElementById("fun").style.width = fun + '%';
 		document.getElementById("h").style.width = health + '%';
+		document.cookie = 'fun=' + fun + ';'
+		document.cookie = 'health=' + health + ';'
 	} else {
 		alert('Your cat died! :(', title='CAT SIMULATOR')
 		window.clearInterval(lifetimer);
@@ -148,6 +196,7 @@ function walk() {
 	var e = document.getElementById('w')
 	if (fun < 91) {
 		fun = fun + 10
+		document.cookie = 'fun=' + fun + ';'
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You went for a walk!'
 	} else {
@@ -160,6 +209,8 @@ function heal() {
 	var e = document.getElementById('he');
 	if (health < 91 && m >=70) {
 		m = m - 70
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'health=' + health + ';'
 		health = health + 10
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
@@ -179,6 +230,7 @@ function rn() {
 		location = location
 	}
 	document.getElementById('name').innerHTML = 'Name: ' + name;
+	document.cookie = 'name=' + name + ';'
 }
 
 function travel() {
@@ -186,6 +238,8 @@ function travel() {
 	if (m >=1000 && fun < 20) {
 		m = m - 1000
 		fun = fun + 70
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'fun=' + fun + ';'
 		elem = document.getElementById('status')
 		elem.innerHTML = 'STATUS: You bought improved!'
 	} else if (fun > 20 && m >=1000) {
