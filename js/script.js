@@ -18,7 +18,7 @@ window.onload = function() {
 	cookieh = document.cookie.replace(/(?:(?:^|.*;\s*)health\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookief = document.cookie.replace(/(?:(?:^|.*;\s*)fun\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookien = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
-	if (cookien != '') {
+	if (cookien == '') {
 		var name = prompt('Name of your cat:' , 'Bob')
 		if (name == "" || name == null) {
 			location = location
