@@ -130,7 +130,7 @@ h3 {
 #about {
 	display: none;
 	width: 420px;
-	height: 370px;
+	height: 270px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -139,7 +139,7 @@ h3 {
 #settings {
 	display: none;
 	width: 420px;
-	height: 370px;
+	height: 270px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -172,7 +172,7 @@ h3 {
 #ch {
 	/*background-color: #f0f8ff;*/
 	width: 400px;
-	height: 370px;
+	height: 340px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -238,4 +238,8 @@ h3 {
 
 #start_label {
 	margin-bottom: 20px;
+}
+
+#rn {
+	display: none;
 }

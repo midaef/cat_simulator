@@ -48,6 +48,8 @@ function showmenu() {
 	document.getElementById('menu').style.display = 'block';
 	document.getElementById('status').style.display = 'none';
 	document.getElementById('ch').style.display = 'none';
+	document.getElementById('rn').style.display = 'none';
+	document.getElementById('settings').style.display = 'none';
 	document.getElementById('cp').style.display = 'none';
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('start').style.display = 'none';
@@ -96,7 +98,8 @@ function about() {
 function set() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
-	document.getElementById('settings').style.display = 'block'
+	document.getElementById('settings').style.display = 'block';
+	document.getElementById('rn').style.display = 'block';
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'SETTINGS';
