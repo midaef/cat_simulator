@@ -7,6 +7,11 @@ var	timer
 var	lifetimer
 
 window.onload = function() {
+	var name = prompt('Name of your cat:' , 'Bob')
+	if (name == "" || name == null) {
+		location = location
+	}
+	document.getElementById('name').innerHTML = 'Name: ' + name;
 	document.getElementById("fun").style.width = fun + '%';
 	document.getElementById("h").style.width = health + '%';
 	timer = window.setInterval(work, 1500);
@@ -29,10 +34,10 @@ function life() {
 		document.getElementById("fun").style.width = fun + '%';
 		document.getElementById("h").style.width = health + '%';
 	} else {
-		alert('Your cat died! :(')
+		alert('Your cat died! :(', title='CAT SIMULATOR')
 		window.clearInterval(lifetimer);
 		window.clearInterval(timer);
-		location.reload()
+		location = location
 	}
 }
 	
@@ -85,6 +90,16 @@ function about() {
 	document.getElementById('about').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'ABOUT';
+	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
+}
+
+function set() {
+	var elem = document.getElementById('score')	
+	elem.innerHTML = 'MONEY: ' + m;
+	document.getElementById('settings').style.display = 'block'
+	document.getElementById('about').style.display = 'none';
+	document.getElementById('menu').style.display = 'none';
+	document.getElementById('start_label').innerHTML = 'SETTINGS';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
 }
 
@@ -153,6 +168,14 @@ function heal() {
 		elem2 = document.getElementById('status')
 		elsem2.innerHTML = 'STATUS: Not enough money!'
 	}
+}
+
+function rn() {
+	var name = prompt('Name of your cat:' , 'Bob')
+	if (name == "" || name == null) {
+		location = location
+	}
+	document.getElementById('name').innerHTML = 'Name: ' + name;
 }
 
 function travel() {

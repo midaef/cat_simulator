@@ -121,9 +121,23 @@ h3 {
 	font-size: 23px;
 }
 
+#name {
+	padding-top: 5px;
+	padding-bottom: 5px;
+	font-size: 23px;
+}
+
 #about {
 	display: none;
-	/*background-color: #f0f8ff;*/
+	width: 420px;
+	height: 370px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+}
+
+#settings {
+	display: none;
 	width: 420px;
 	height: 370px;
 	vertical-align: middle;	
@@ -163,6 +177,9 @@ h3 {
 	text-align: center;
 	margin: 0 auto;
 	display: none;
+}
+
+#rn {
 }
 
 #h {
