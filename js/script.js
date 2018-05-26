@@ -259,3 +259,40 @@ function show_money() {
 	var elem = document.getElementById('score')
 	elem.innerHTML = 'MONEY: ' + m
 }
+
+function moneyplus1() {
+	element = document.getElementById('plus1')
+	if (m >= 2000) {
+		ms = ms + 3;
+		m = m - 2000;
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'ms=' + ms + ';'
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+		var elem1 = document.getElementById('score')
+		elem1.innerHTML = 'MONEY: ' + m
+	}
+	else {
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: Not enough money!'
+	}
+}
+
+function heal1() {
+	var e = document.getElementById('he1');
+	if (health < 91 && m >=500) {
+		m = m - 500
+		document.cookie = 'm=' + m + ';'
+		document.cookie = 'health=' + health + ';'
+		health = health + 30
+		elem = document.getElementById('status')
+		elem.innerHTML = 'STATUS: You bought improved!'
+	} else if (health > 90 && m>=500) {
+		elem1 = document.getElementById('status')
+		elem1.innerHTML = 'STATUS: Your cat is very healthy!'
+
+	} else {
+		elem2 = document.getElementById('status')
+		elsem2.innerHTML = 'STATUS: Not enough money!'
+	}
+}
