@@ -179,9 +179,6 @@ h3 {
 	display: none;
 }
 
-#rn {
-}
-
 #h {
 	/*margin: 0 auto;*/
 	margin-bottom: 20px;
@@ -206,6 +203,22 @@ h3 {
 #hb {
 	border: solid 2px blue;
 	height: 25px;
+	border-radius: 1px;
+}
+
+#eb {
+	border: solid 2px yellow;
+	height: 25px;
+	border-radius: 1px;
+}
+
+#ex {
+	/*margin: 0 auto;*/
+	background-color: yellow;
+	width: 300px;
+	height: 25px;
+	vertical-align: middle;
+	text-align: left;
 	border-radius: 1px;
 }
 

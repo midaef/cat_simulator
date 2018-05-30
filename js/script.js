@@ -3,6 +3,7 @@ var m = 50;
 	ms = 1;
 	health = 100
 	fun = 100
+	ex = 0
 var	timer
 var	lifetimer
 
@@ -10,6 +11,7 @@ window.onload = function() {
 	
 	document.getElementById("fun").style.width = fun + '%';
 	document.getElementById("h").style.width = health + '%';
+	document.getElementById("ex").style.width = ex + '%';
 	timer = window.setInterval(work, 1500);
 	lifetimer = window.setInterval(life, 2200)
 	// ----------------------------------------------------------------------------------------
@@ -18,6 +20,7 @@ window.onload = function() {
 	cookieh = document.cookie.replace(/(?:(?:^|.*;\s*)health\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookief = document.cookie.replace(/(?:(?:^|.*;\s*)fun\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookien = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiex = document.cookie.replace(/(?:(?:^|.*;\s*)ex\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	if (cookien == '') {
 		var name = prompt('Name of your cat:' , 'Bob')
 		if (name == "" || name == null) {
@@ -42,17 +45,24 @@ window.onload = function() {
 	}
 
 	if (cookieh == '') {
-		health = 48
+		health = 100
 		document.cookie = 'health=' + health + ';'
 	} else {
 		health = parseInt(cookieh)
 	}
 
 	if (cookief == '') {
-		fun = 52
+		fun = 100
 		document.cookie = 'fun=' + fun + ';'
 	} else {
 		fun = parseInt(cookief)
+	}
+
+	if (cookiex == '') {
+		ex = 0
+		document.cookie = 'ex=' + ex + ';'
+	} else {
+		ex = parseInt(cookiex)
 	}
 
 	var elem = document.getElementById('score')	
@@ -74,13 +84,16 @@ function life() {
 	if (health > 0 && fun > 0) {
 		fun = fun - 1
 		health = health - 0.5
+		ex = ex + 0.5
 		if (fun < 0) {
 			fun = 0
 		} 
 		document.getElementById("fun").style.width = fun + '%';
 		document.getElementById("h").style.width = health + '%';
+		document.getElementById("ex").style.width = ex + '%';
 		document.cookie = 'fun=' + fun + ';'
 		document.cookie = 'health=' + health + ';'
+		document.cookie = 'ex=' + ex + ';'
 	} else {
 		alert('Your cat died! :(', title='CAT SIMULATOR')
 		window.clearInterval(lifetimer);
