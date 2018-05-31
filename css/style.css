@@ -115,6 +115,11 @@ h3 {
 	display: none;
 }
 
+#lv {
+	padding-top: 5px;
+	font-size: 22px;
+}
+
 #score {
 	padding-top: 5px;
 	padding-bottom: 5px;

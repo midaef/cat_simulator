@@ -4,6 +4,7 @@ var m = 50;
 	health = 100
 	fun = 100
 	ex = 0
+	level = 1
 var	timer
 var	lifetimer
 
@@ -21,6 +22,7 @@ window.onload = function() {
 	cookief = document.cookie.replace(/(?:(?:^|.*;\s*)fun\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookien = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookiex = document.cookie.replace(/(?:(?:^|.*;\s*)ex\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiel = document.cookie.replace(/(?:(?:^|.*;\s*)lv\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	if (cookien == '') {
 		var name = prompt('Name of your cat:' , 'Bob')
 		if (name == "" || name == null) {
@@ -65,6 +67,13 @@ window.onload = function() {
 		ex = parseInt(cookiex)
 	}
 
+	if (cookiel == '') {
+		level = 1
+		document.cookie = 'lv=' + level + ';'
+	} else {
+		level = parseInt(cookiel)
+	}
+
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('name').innerHTML = 'Name: ' + name;
@@ -88,6 +97,16 @@ function life() {
 		if (fun < 0) {
 			fun = 0
 		} 
+		if (ex > 100) {
+			ex = 0
+			level = level + 1
+			document.cookie = 'lv=' + level + ';'
+			document.getElementById('lv').innerHTML = 'LEVEL: ' + level;
+			document.getElementById('lv1').innerHTML = 'LEVEL: ' + level;
+		}
+		if (health == 5 || fun == 5) {
+			alert('Your cat is going to die soon!')
+		}
 		document.getElementById("fun").style.width = fun + '%';
 		document.getElementById("h").style.width = health + '%';
 		document.getElementById("ex").style.width = ex + '%';
@@ -107,6 +126,7 @@ function showmenu() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'block';
+	document.getElementById('lv').style.display = 'block';
 	document.getElementById('status').style.display = 'none';
 	document.getElementById('ch').style.display = 'none';
 	document.getElementById('rn').style.display = 'none';
@@ -123,6 +143,7 @@ function showgame() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('start').style.display = 'block';
+	document.getElementById('lv').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'CAT';
@@ -139,6 +160,7 @@ function showmarket() {
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('status').style.display = 'block';
+	document.getElementById('lv').style.display = 'block';
 	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('market').style.display = 'block'
 	document.getElementById('about').style.display = 'none';
@@ -151,6 +173,7 @@ function about() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('about').style.display = 'block';
+	document.getElementById('lv').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'ABOUT';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
@@ -161,6 +184,7 @@ function set() {
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('settings').style.display = 'block';
 	document.getElementById('rn').style.display = 'block';
+	document.getElementById('lv').style.display = 'block';
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'SETTINGS';
@@ -171,6 +195,7 @@ function competitions() {
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('cp').style.display = 'block';
+	document.getElementById('lv').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'COMPETITIONS';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
@@ -183,6 +208,7 @@ function ch() {
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('ch').style.display = 'block';
 	document.getElementById('menu').style.display = 'none';
+	document.getElementById('lv').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'CHARACTERISTICS';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
 }
