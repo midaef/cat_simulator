@@ -5,6 +5,8 @@ var m = 50;
 	fun = 100
 	ex = 0
 	level = 1
+	zp = 10
+	ek = 0.5
 var	timer
 var	lifetimer
 
@@ -23,6 +25,8 @@ window.onload = function() {
 	cookien = document.cookie.replace(/(?:(?:^|.*;\s*)name\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookiex = document.cookie.replace(/(?:(?:^|.*;\s*)ex\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	cookiel = document.cookie.replace(/(?:(?:^|.*;\s*)lv\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiezp = document.cookie.replace(/(?:(?:^|.*;\s*)zp\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+	cookiek = document.cookie.replace(/(?:(?:^|.*;\s*)ek\s*\=\s*([^;]*).*$)|^.*$/, "$1");
 	if (cookien == '') {
 		var name = prompt('Name of your cat:' , 'Bob')
 		if (name == "" || name == null) {
@@ -74,6 +78,21 @@ window.onload = function() {
 		level = parseInt(cookiel)
 	}
 
+	if (cookiezp == '') {
+		zp = 10
+		document.cookie = 'zp=' + zp + ';'
+	} else {
+		zp = parseInt(cookiezp)
+	}
+
+	if (cookiek == '') {
+		ek = 0.5
+		document.cookie = 'ek=' + ek + ';'
+	} else {
+		ek = parseInt(cookiek)
+	}
+
+
 	var elem = document.getElementById('score')	
 	elem.innerHTML = 'MONEY: ' + m;
 	document.getElementById('name').innerHTML = 'Name: ' + name;
@@ -83,7 +102,7 @@ window.onload = function() {
 
 
 function work() {
-	m = m + 10
+	m = m + zp
 	elem = document.getElementById('score')
 	elem.innerHTML = 'MONEY: ' + m
 	document.cookie = 'm=' + m + ';'
@@ -93,17 +112,51 @@ function life() {
 	if (health > 0 && fun > 0) {
 		fun = fun - 1
 		health = health - 0.5
-		ex = ex + 0.5
+		ex = ex + ek
 		if (fun < 0) {
 			fun = 0
 		} 
 		if (ex > 100) {
 			ex = 0
 			level = level + 1
+			m = m + 100
+			zp = zp + 10
+			document.cookie = 'zp=' + zp + ';'
+			document.cookie = 'm=' + m + ';'
 			document.cookie = 'lv=' + level + ';'
 			document.getElementById('lv').innerHTML = 'LEVEL: ' + level;
 			document.getElementById('lv1').innerHTML = 'LEVEL: ' + level;
 		}
+
+		if (level == 6) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+		if (level == 12) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+		if (level == 18) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+		if (level == 24) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+		if (level == 30) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+		if (level == 36) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+		if (level == 42) {
+			ek = ek + 0.5
+			document.cookie = 'ek=' + ek + ';'
+		}
+
 		if (health == 5 || fun == 5) {
 			alert('Your cat is going to die soon!')
 		}
@@ -113,6 +166,8 @@ function life() {
 		document.cookie = 'fun=' + fun + ';'
 		document.cookie = 'health=' + health + ';'
 		document.cookie = 'ex=' + ex + ';'
+		document.getElementById('lv').innerHTML = 'LEVEL: ' + level;
+		document.getElementById('lv1').innerHTML = 'LEVEL: ' + level;
 	} else {
 		alert('Your cat died! :(', title='CAT SIMULATOR')
 		window.clearInterval(lifetimer);

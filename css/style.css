@@ -260,4 +260,7 @@ h3 {
 
 #rn {
 	display: none;
+	border: 7px;
+	width: 225px;
+	margin: 0 auto;
 }
