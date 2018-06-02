@@ -189,6 +189,8 @@ function showmenu() {
 	document.getElementById('cp').style.display = 'none';
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('start').style.display = 'none';
+	document.getElementById('page1').style.display = 'none';
+	document.getElementById('market1').style.display = 'none';
 	document.getElementById('market').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'CAT SIMULATOR';
 	document.getElementById('exit').innerHTML = '';
@@ -213,13 +215,15 @@ function money3() {
 function showmarket() {
 	var elem = document.getElementById('score')		
 	elem.innerHTML = 'MONEY: ' + m;
-	document.getElementById('menu').style.display = 'none';
 	document.getElementById('status').style.display = 'block';
 	document.getElementById('lv').style.display = 'block';
-	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('market').style.display = 'block'
 	document.getElementById('about').style.display = 'none';
+	document.getElementById('page1').style.display = 'none';
+	document.getElementById('market1').style.display = 'none';
+	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'MARKETPLACE';
+	document.getElementById('status').innerHTML = 'STATUS: NONE';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
 	document.getElementById('plus');
 }
@@ -266,6 +270,13 @@ function ch() {
 	document.getElementById('lv').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'CHARACTERISTICS';
 	document.getElementById('exit').innerHTML = '<a href="javascript:void(0)">EXIT TO MENU</a>';
+}
+
+function page() {
+	document.getElementById('page').style.display = 'block';
+	document.getElementById('page1').style.display = 'block';
+	document.getElementById('market1').style.display = 'block';
+	document.getElementById('market').style.display = 'none';
 }
 
 function moneyplus() {
@@ -356,9 +367,9 @@ function show_money() {
 
 function moneyplus1() {
 	element = document.getElementById('plus1')
-	if (m >= 2000) {
+	if (m >= 1700) {
 		ms = ms + 3;
-		m = m - 2000;
+		m = m - 1700;
 		document.cookie = 'm=' + m + ';'
 		document.cookie = 'ms=' + ms + ';'
 		elem = document.getElementById('status')

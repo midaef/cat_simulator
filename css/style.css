@@ -100,9 +100,8 @@ h3 {
 }
 
 #market {
-	/*background-color: #f0f8ff;*/
 	width: 400px;
-	height: 300px;
+	height: 370px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -263,4 +262,40 @@ h3 {
 	border: 7px;
 	width: 225px;
 	margin: 0 auto;
+}
+
+#page {
+	color: black;
+	width: 50px;
+	margin: 0 auto;
+}
+
+#page:hover {
+	color: white;
+	width: 50px;
+}
+
+#page1 {
+	margin: 0 auto;
+	display: none;
+	width: 50px;
+	color: black;
+}
+
+#page1:hover {
+	color: white;
+	width: 50px;
+}
+
+#market1 {
+	width: 400px;
+	height: 350px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}
+
+#up {
+
 }
