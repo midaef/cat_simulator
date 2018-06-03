@@ -287,6 +287,18 @@ h3 {
 	width: 50px;
 }
 
+#page2 {
+	margin: 0 auto;
+	display: none;
+	width: 50px;
+	color: black;
+}
+
+#page2:hover {
+	color: white;
+	width: 50px;
+}
+
 #market1 {
 	width: 400px;
 	height: 350px;
@@ -296,6 +308,15 @@ h3 {
 	display: none;
 }
 
-#up {
+#market2 {
+	width: 400px;
+	height: 350px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}
 
+#p {
+	display: inline-block;
 }

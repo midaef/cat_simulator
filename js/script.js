@@ -191,6 +191,7 @@ function showmenu() {
 	document.getElementById('start').style.display = 'none';
 	document.getElementById('page1').style.display = 'none';
 	document.getElementById('market1').style.display = 'none';
+	document.getElementById('market2').style.display = 'none';
 	document.getElementById('market').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'CAT SIMULATOR';
 	document.getElementById('exit').innerHTML = '';
@@ -221,6 +222,7 @@ function showmarket() {
 	document.getElementById('about').style.display = 'none';
 	document.getElementById('page1').style.display = 'none';
 	document.getElementById('market1').style.display = 'none';
+	document.getElementById('market2').style.display = 'none';
 	document.getElementById('menu').style.display = 'none';
 	document.getElementById('start_label').innerHTML = 'MARKETPLACE';
 	document.getElementById('status').innerHTML = 'STATUS: NONE';
@@ -277,6 +279,13 @@ function page() {
 	document.getElementById('page1').style.display = 'block';
 	document.getElementById('market1').style.display = 'block';
 	document.getElementById('market').style.display = 'none';
+	document.getElementById('market2').style.display = 'none';
+}
+
+function page1() {
+	document.getElementById('market2').style.display = 'block';
+	document.getElementById('page2').style.display = 'block';
+	document.getElementById('market1').style.display = 'none';
 }
 
 function moneyplus() {
