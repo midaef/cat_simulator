@@ -20,8 +20,28 @@ body {
 	-webkit-overflow-scrolling: touch;
 }
 
+@-webkit-keyframes bg {
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+@-moz-keyframes bg {
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+@-o-keyframes bg {
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+@keyframes bg { 
+    0%{background-position:0% 10%}
+    50%{background-position:100% 91%}
+    100%{background-position:0% 10%}
+}
+
 .menu {
-	/*background-color: #f0f8ff;*/
 	width: 270px;
 	height: 270px;
 	vertical-align: middle;	
@@ -99,15 +119,6 @@ h3 {
 	width: 200px;
 }
 
-#market {
-	width: 400px;
-	height: 370px;
-	vertical-align: middle;	
-	text-align: center;
-	margin: 0 auto;
-	display: none;
-}
-
 #status {
 	padding-top: 5px;
 	font-size: 22px;
@@ -176,7 +187,7 @@ h3 {
 #ch {
 	/*background-color: #f0f8ff;*/
 	width: 400px;
-	height: 340px;
+	height: 320px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -232,27 +243,6 @@ h3 {
 	border-radius: 2px;
 }
 
-@-webkit-keyframes bg {
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
-@-moz-keyframes bg {
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
-@-o-keyframes bg {
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
-@keyframes bg { 
-    0%{background-position:0% 10%}
-    50%{background-position:100% 91%}
-    100%{background-position:0% 10%}
-}
-
 #start_label {
 	margin-bottom: 20px;
 }
@@ -299,9 +289,18 @@ h3 {
 	width: 50px;
 }
 
+#market {
+	width: 400px;
+	height: 270px;
+	vertical-align: middle;	
+	text-align: center;
+	margin: 0 auto;
+	display: none;
+}
+
 #market1 {
 	width: 400px;
-	height: 350px;
+	height: 270px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -310,7 +309,7 @@ h3 {
 
 #market2 {
 	width: 400px;
-	height: 350px;
+	height: 270px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
