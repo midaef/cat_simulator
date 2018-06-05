@@ -120,7 +120,7 @@ function life() {
 			ex = 0
 			level = level + 1
 			m = m + 100
-			zp = zp + 10
+			zp = zp + 2
 			document.cookie = 'zp=' + zp + ';'
 			document.cookie = 'm=' + m + ';'
 			document.cookie = 'lv=' + level + ';'

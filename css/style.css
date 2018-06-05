@@ -14,7 +14,6 @@ body {
 	-o-animation: bg 48s ease infinite;
 	animation: bg 48s ease infinite;
 
-	/*background-image: url(bg.jpg);*/
 	background-repeat: all;
 	-webkit-font-smoothing: antialiased;
 	-webkit-overflow-scrolling: touch;
@@ -51,7 +50,7 @@ body {
 
 #hr1 {
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 35px;
 }
 
 #hr2 {
@@ -93,7 +92,6 @@ a:hover {
 }
 
 #start {
- 	/*background-color: #f0f8ff;*/
 	width: 200px;
 	height: 270px;
 	vertical-align: middle;	
@@ -175,7 +173,6 @@ h3 {
 }
 
 #cp {
-	/*background-color: #f0f8ff;*/
 	width: 270px;
 	height: 270px;
 	vertical-align: middle;	
@@ -185,7 +182,6 @@ h3 {
 }
 
 #ch {
-	/*background-color: #f0f8ff;*/
 	width: 400px;
 	height: 320px;
 	vertical-align: middle;	
@@ -195,7 +191,6 @@ h3 {
 }
 
 #h {
-	/*margin: 0 auto;*/
 	margin-bottom: 20px;
 	background-color: blue;
 	width: 300px;
@@ -206,7 +201,6 @@ h3 {
 }
 
 #fun {
-	/*margin: 0 auto;*/
 	background-color: orange;
 	width: 300px;
 	height: 25px;
@@ -228,7 +222,6 @@ h3 {
 }
 
 #ex {
-	/*margin: 0 auto;*/
 	background-color: yellow;
 	width: 300px;
 	height: 25px;
@@ -291,7 +284,7 @@ h3 {
 
 #market {
 	width: 400px;
-	height: 270px;
+	height: 250px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -300,7 +293,7 @@ h3 {
 
 #market1 {
 	width: 400px;
-	height: 270px;
+	height: 250px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
@@ -309,7 +302,7 @@ h3 {
 
 #market2 {
 	width: 400px;
-	height: 270px;
+	height: 250px;
 	vertical-align: middle;	
 	text-align: center;
 	margin: 0 auto;
